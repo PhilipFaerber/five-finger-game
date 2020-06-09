@@ -1,0 +1,56 @@
+<html>
+
+    <head>
+         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+         <title>3.11 Javascript Spiel - fünf Finger</title>
+        
+        <!-- CSS -->
+        
+        <style type="text/css"> </style>
+        
+    </head>
+
+    <body>
+        
+        
+        <!-- HTML -->
+        
+        <h1>Fünf Finger Spiel</h1>
+        
+        <p>Wie viele Finger halte ich hoch?</p>
+        
+        <input type="Text" id="input">
+        
+        <button id="answer">Antworten</button>
+        
+        
+        <!-- JS -->
+        
+        <script type="text/javascript"> 
+                    
+            
+                        
+            document.getElementById("answer").onclick = function(){
+                
+                var fingers = document.getElementById("input").value;
+                var random = Math.floor(Math.random() * 5) + 1;
+                
+                console.log("Zufallszahl: " + random);
+                
+                if(fingers == random){
+                    alert("deine Zahl: " + fingers);
+                    alert("Herzlichen Glückwunsch");
+                    var random = Math.floor(Math.random() * 5) + 1;
+                }
+                else{
+                    alert("deine Zahl: " + fingers);
+                    alert("Leider verloren");
+                }
+            }
+            
+        </script>
+        
+        
+    </body>    
+    
+</html>
